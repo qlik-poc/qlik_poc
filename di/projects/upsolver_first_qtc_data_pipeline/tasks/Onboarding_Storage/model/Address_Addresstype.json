@@ -1,0 +1,25 @@
+{
+  "sourceEntity": {
+    "datasetId": "address-f-ak",
+    "name": "address",
+    "projectId": "{{ref(project.current.projectId)}}",
+    "taskId": "onboarding_storage-f-ai"
+  },
+  "targetEntity": {
+    "datasetId": "addresstype-f-al",
+    "name": "addresstype",
+    "projectId": "{{ref(project.current.projectId)}}",
+    "taskId": "onboarding_storage-f-ai"
+  },
+  "columnRelationships": [
+    {
+      "sourceColumn": "addressid",
+      "targetColumn": "addresstypeid",
+      "sourceColumnId": "addressid",
+      "targetColumnId": "addresstypeid"
+    }
+  ],
+  "name": "Address_Addresstype",
+  "description": "",
+  "id": "address_addresstype-f-ax"
+}

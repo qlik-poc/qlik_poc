@@ -1,0 +1,74 @@
+{
+  "id": "$replicate$person_addresstype",
+  "name": "person_addresstype",
+  "type": "LANDING",
+  "tableDef": {
+    "name": "addresstype",
+    "dbSchema": "{{task.onboarding_landing-f-ah:null$_$person.schema}}",
+    "dbName": "{{task.onboarding_landing-f-ah:null$_$person.database}}",
+    "columns": [
+      {
+        "name": "addresstypeid",
+        "ordinal": 1,
+        "nullable": false,
+        "primaryKeyOrdinal": 1,
+        "datatype": {
+          "type": "INT4",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": ""
+        },
+        "id": "addresstypeid",
+        "flags": "NONE"
+      },
+      {
+        "name": "name",
+        "ordinal": 2,
+        "nullable": false,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "WSTRING",
+          "length": 50,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": ""
+        },
+        "id": "name",
+        "flags": "NONE"
+      },
+      {
+        "name": "rowguid",
+        "ordinal": 3,
+        "nullable": false,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 36,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": ""
+        },
+        "id": "rowguid",
+        "flags": "NONE"
+      },
+      {
+        "name": "modifieddate",
+        "ordinal": 4,
+        "nullable": false,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "DATETIME",
+          "length": 0,
+          "precision": 6,
+          "scale": 0,
+          "originalTypeFull": ""
+        },
+        "id": "modifieddate",
+        "flags": "NONE"
+      }
+    ],
+    "secureQri": "",
+    "fullLoadOnly": false
+  }
+}
