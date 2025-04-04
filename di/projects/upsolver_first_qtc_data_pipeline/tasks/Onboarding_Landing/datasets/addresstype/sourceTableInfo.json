@@ -66,6 +66,21 @@
         },
         "id": "modifieddate",
         "flags": "NONE"
+      },
+      {
+        "name": "modifiedby",
+        "ordinal": 5,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "WSTRING",
+          "length": 50,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": ""
+        },
+        "id": "modifiedby-6e03",
+        "flags": "NONE"
       }
     ],
     "secureQri": "",
