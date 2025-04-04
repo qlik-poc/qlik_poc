@@ -1,0 +1,21 @@
+{
+  "id": "addresstype-f-al",
+  "name": "addresstype",
+  "type": "STORAGE",
+  "inputDatasets": [
+    {
+      "datasetId": "addresstype",
+      "name": "addresstype",
+      "projectId": "{{ref(project.current.projectId)}}",
+      "taskId": "onboarding_landing-f-ah"
+    }
+  ],
+  "datasetAttributes": {
+    "materialized": "INHERIT",
+    "hasHistory": "INHERIT",
+    "hasLiveViews": "INHERIT",
+    "hasChanges": "INHERIT",
+    "hasStandardViewsWithHeaders": "INHERIT",
+    "watermarkIncrementalSettings": "INHERIT"
+  }
+}

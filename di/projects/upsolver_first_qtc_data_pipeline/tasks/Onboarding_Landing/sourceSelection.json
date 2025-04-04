@@ -1,0 +1,21 @@
+{
+  "sourceConnection": "{{task.onboarding_landing-f-ah.sourceConnection}}",
+  "includePatterns": [],
+  "excludePatterns": [],
+  "explicitlySelected": [
+    {
+      "database": "{{task.onboarding_landing-f-ah:null$_$person.database}}",
+      "name": "address",
+      "schema": "{{task.onboarding_landing-f-ah:null$_$person.schema}}",
+      "type": "TABLE",
+      "sourceTableId": "$replicate$person_address"
+    },
+    {
+      "database": "{{task.onboarding_landing-f-ah:null$_$person.database}}",
+      "name": "addresstype",
+      "schema": "{{task.onboarding_landing-f-ah:null$_$person.schema}}",
+      "type": "TABLE",
+      "sourceTableId": "$replicate$person_addresstype"
+    }
+  ]
+}

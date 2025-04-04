@@ -1,0 +1,69 @@
+{
+  "variables": {
+    "projectName": "",
+    "platformConnection": "",
+    "cloudStagingConnection": "",
+    "project.current.prefixSchema": "",
+    "task-type.landing.warehouseName": "",
+    "task-type.landing.warehouseSelectionMethod": "",
+    "task-type.landing.databaseName": "",
+    "task-type.landing.databaseSelectionMethod": "",
+    "task-type.registered.databaseName": "",
+    "task-type.registered.databaseSelectionMethod": "",
+    "task-type.storage.warehouseName": "",
+    "task-type.storage.warehouseSelectionMethod": "",
+    "task-type.storage.databaseName": "",
+    "task-type.storage.databaseSelectionMethod": "",
+    "task-type.storage.snowflakeExternalVolume": "",
+    "task-type.storage.snowflakeOpenCatalog": "",
+    "task-type.transform.warehouseName": "",
+    "task-type.transform.warehouseSelectionMethod": "",
+    "task-type.transform.databaseName": "",
+    "task-type.transform.databaseSelectionMethod": "",
+    "task-type.transform.snowflakeExternalVolume": "",
+    "task-type.transform.snowflakeOpenCatalog": "",
+    "task-type.datamart.warehouseName": "",
+    "task-type.datamart.warehouseSelectionMethod": "",
+    "task-type.datamart.databaseName": "",
+    "task-type.datamart.databaseSelectionMethod": "",
+    "task-type.datamart.snowflakeExternalVolume": "",
+    "task-type.datamart.snowflakeOpenCatalog": "",
+    "task-type.knowledgeMart.vectorDbConnection": "",
+    "task-type.knowledgeMart.vectorDbTargetType": "",
+    "task-type.knowledgeMart.llmConnection": "",
+    "task-type.knowledgeMart.databricksVectorSearchEndpoint": "",
+    "task-type.knowledgeMart.warehouseName": "",
+    "task-type.knowledgeMart.warehouseSelectionMethod": "",
+    "task-type.knowledgeMart.databaseName": "",
+    "task-type.knowledgeMart.databaseSelectionMethod": "",
+    "task-type.fileBasedKnowledgeMart.vectorDbConnection": "",
+    "task-type.fileBasedKnowledgeMart.vectorDbTargetType": "",
+    "task-type.fileBasedKnowledgeMart.llmConnection": "",
+    "task-type.fileBasedKnowledgeMart.warehouseName": "",
+    "task-type.fileBasedKnowledgeMart.warehouseSelectionMethod": "",
+    "task.onboarding_storage-f-ai.databaseName": "",
+    "task.onboarding_storage-f-ai.internalSchema": "",
+    "task.onboarding_storage-f-ai.taskSchema": "",
+    "task.onboarding_storage-f-ai.warehouseName": "",
+    "task.onboarding_storage-f-ai:null$_$%.schemaPattern": "",
+    "task.onboarding_landing-f-ah.databaseName": "",
+    "task.onboarding_landing-f-ah.taskSchema": "",
+    "task.onboarding_landing-f-ah.sourceConnection": "",
+    "task.onboarding_landing-f-ah:null$_$person.database": "",
+    "task.onboarding_landing-f-ah:null$_$person.schema": "",
+    "task.onboarding_landing-f-ah:Adventureworks$_$person.database": "",
+    "task.onboarding_landing-f-ah:Adventureworks$_$person.schema": ""
+  },
+  "idToNameMap": {
+    "onboarding_storage-f-ai": "Onboarding_Storage",
+    "onboarding_landing-f-ah": "Onboarding_Landing"
+  },
+  "connectionProperties": {
+    "{{id(connection, qtc_01.Upsolver_Snowflake_pipeline_target)}}": {
+      "type": "reptgt_qdisnowflake"
+    },
+    "{{id(connection, qtc_01.upsolver_postgres_cdc)}}": {
+      "type": "repsrc_postgresql"
+    }
+  }
+}
