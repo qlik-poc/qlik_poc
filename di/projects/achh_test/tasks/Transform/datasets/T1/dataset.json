@@ -1,0 +1,61 @@
+{
+  "id": "t1-ug8x",
+  "name": "T1",
+  "type": "CUSTOM",
+  "inputDatasets": [
+    {
+      "datasetId": "actor-jkuh",
+      "name": "actor",
+      "projectId": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "taskId": "dw_mirror-ug7s"
+    },
+    {
+      "datasetId": "film-jkun",
+      "name": "film",
+      "projectId": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "taskId": "dw_mirror-ug7s"
+    },
+    {
+      "datasetId": "film_actor-jkuo",
+      "name": "film_actor",
+      "projectId": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "taskId": "dw_mirror-ug7s"
+    }
+  ],
+  "datasetAttributes": {
+    "materialized": "INHERIT",
+    "hasHistory": "INHERIT",
+    "hasLiveViews": "INHERIT",
+    "hasChanges": "INHERIT",
+    "hasStandardViewsWithHeaders": "INHERIT",
+    "watermarkIncrementalSettings": "INHERIT"
+  },
+  "tableDef": {
+    "name": "T1",
+    "columns": [],
+    "secureQri": "",
+    "fullLoadOnly": false
+  },
+  "customDatasetSettings": {
+    "customSql": {
+      "expressionStatement": "\nSELECT\n    a.\u0022first_name\u0022,\n    a.\u0022last_name\u0022,\n    f.\u0022title\u0022\nFROM\n    ${actor} a\n    INNER JOIN ${film_actor} fa ON a.\u0022actor_id\u0022 = fa.\u0022actor_id\u0022\n    INNER JOIN ${film} f ON fa.\u0022film_id\u0022 = f.\u0022film_id\u0022;\n",
+      "alias": [
+        {
+          "name": "actor",
+          "value": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}$_$dw_mirror-ug7s$_$actor-jkuh"
+        },
+        {
+          "name": "film_actor",
+          "value": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}$_$dw_mirror-ug7s$_$film_actor-jkuo"
+        },
+        {
+          "name": "film",
+          "value": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}$_$dw_mirror-ug7s$_$film-jkun"
+        }
+      ]
+    },
+    "incremental": false
+  },
+  "virtualDataset": false,
+  "description": ""
+}

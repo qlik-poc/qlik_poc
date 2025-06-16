@@ -1,0 +1,34 @@
+{
+  "includePatterns": [],
+  "excludePatterns": [],
+  "explicitlySelected": [
+    {
+      "sourceProject": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "sourceTask": "dw_mirror-ug7s",
+      "name": "actor",
+      "type": "NONE",
+      "sourceTableId": "actor-jkuh"
+    },
+    {
+      "sourceProject": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "sourceTask": "dw_mirror-ug7s",
+      "name": "address",
+      "type": "NONE",
+      "sourceTableId": "address-jkui"
+    },
+    {
+      "sourceProject": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "sourceTask": "dw_mirror-ug7s",
+      "name": "film",
+      "type": "NONE",
+      "sourceTableId": "film-jkun"
+    },
+    {
+      "sourceProject": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "sourceTask": "dw_mirror-ug7s",
+      "name": "film_actor",
+      "type": "NONE",
+      "sourceTableId": "film_actor-jkuo"
+    }
+  ]
+}
