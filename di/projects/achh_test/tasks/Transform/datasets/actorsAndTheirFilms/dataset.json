@@ -1,0 +1,142 @@
+{
+  "id": "actorsandtheirfilms-zafm",
+  "name": "actorsAndTheirFilms",
+  "type": "CUSTOM",
+  "inputDatasets": [
+    {
+      "datasetId": "actor-jkuh",
+      "name": "actor",
+      "projectId": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "taskId": "dw_mirror-ug7s"
+    },
+    {
+      "datasetId": "film-jkun",
+      "name": "film",
+      "projectId": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "taskId": "dw_mirror-ug7s"
+    },
+    {
+      "datasetId": "film_actor-jkuo",
+      "name": "film_actor",
+      "projectId": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "taskId": "dw_mirror-ug7s"
+    }
+  ],
+  "datasetAttributes": {
+    "materialized": "INHERIT",
+    "hasHistory": "INHERIT",
+    "hasLiveViews": "INHERIT",
+    "hasChanges": "INHERIT",
+    "hasStandardViewsWithHeaders": "INHERIT",
+    "watermarkIncrementalSettings": "INHERIT"
+  },
+  "tableDef": {
+    "name": "actorsAndTheirFilms",
+    "columns": [
+      {
+        "name": "actor_id",
+        "ordinal": 1,
+        "nullable": false,
+        "primaryKeyOrdinal": 1,
+        "datatype": {
+          "type": "NUMERIC",
+          "length": 0,
+          "precision": 10,
+          "scale": 0,
+          "originalType": "NUMBER",
+          "originalTypeFull": "NUMBER(10,0)"
+        },
+        "id": "actor_id",
+        "flags": "NONE"
+      },
+      {
+        "name": "first_name",
+        "ordinal": 2,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 16777216,
+          "precision": 0,
+          "scale": 0,
+          "originalType": "VARCHAR",
+          "originalTypeFull": "VARCHAR(16777216)"
+        },
+        "id": "first_name",
+        "flags": "NONE"
+      },
+      {
+        "name": "last_name",
+        "ordinal": 3,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 16777216,
+          "precision": 0,
+          "scale": 0,
+          "originalType": "VARCHAR",
+          "originalTypeFull": "VARCHAR(16777216)"
+        },
+        "id": "last_name",
+        "flags": "NONE"
+      },
+      {
+        "name": "title",
+        "ordinal": 4,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "STRING",
+          "length": 16777216,
+          "precision": 0,
+          "scale": 0,
+          "originalType": "VARCHAR",
+          "originalTypeFull": "VARCHAR(16777216)"
+        },
+        "id": "title",
+        "flags": "NONE"
+      },
+      {
+        "name": "release_year",
+        "ordinal": 5,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "NUMERIC",
+          "length": 0,
+          "precision": 10,
+          "scale": 0,
+          "originalType": "NUMBER",
+          "originalTypeFull": "NUMBER(10,0)"
+        },
+        "id": "release_year",
+        "flags": "NONE"
+      }
+    ],
+    "secureQri": "",
+    "fullLoadOnly": false
+  },
+  "customDatasetSettings": {
+    "customSql": {
+      "expressionStatement": "select a.\u0022actor_id\u0022,\n  \u0022first_name\u0022,\n  \u0022last_name\u0022,\n  \u0022title\u0022,\n  \u0022release_year\u0022\nfrom ${actor} a inner join ${film_actor} fa on a.\u0022actor_id\u0022 = fa.\u0022actor_id\u0022\ninner join ${film} f on f.\u0022film_id\u0022 = fa.\u0022film_id\u0022",
+      "alias": [
+        {
+          "name": "actor",
+          "value": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}$_$dw_mirror-ug7s$_$actor-jkuh"
+        },
+        {
+          "name": "film_actor",
+          "value": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}$_$dw_mirror-ug7s$_$film_actor-jkuo"
+        },
+        {
+          "name": "film",
+          "value": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}$_$dw_mirror-ug7s$_$film-jkun"
+        }
+      ]
+    },
+    "incremental": false
+  },
+  "virtualDataset": false,
+  "description": ""
+}

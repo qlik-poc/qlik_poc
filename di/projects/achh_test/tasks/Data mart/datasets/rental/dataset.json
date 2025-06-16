@@ -1,0 +1,264 @@
+{
+  "id": "rental-1aqq",
+  "name": "rental",
+  "type": "DIMENSION",
+  "inputDatasets": [
+    {
+      "datasetId": "rental-jkuu",
+      "name": "rental",
+      "projectId": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "taskId": "dw_mirror-ug7s"
+    }
+  ],
+  "datasetAttributes": {
+    "materialized": "ON",
+    "hasHistory": "INHERIT",
+    "hasLiveViews": "INHERIT",
+    "hasChanges": "INHERIT",
+    "hasStandardViewsWithHeaders": "ON",
+    "watermarkIncrementalSettings": "INHERIT"
+  },
+  "tableDef": {
+    "name": "rental",
+    "columns": [
+      {
+        "name": "rental_id",
+        "ordinal": 1,
+        "nullable": true,
+        "primaryKeyOrdinal": 1,
+        "datatype": {
+          "type": "INT4",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "INTEGER"
+        },
+        "id": "rental_id",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "rental_date",
+        "ordinal": 2,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "DATETIME",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "TIMESTAMP_NTZ(0)"
+        },
+        "id": "rental_date",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "inventory_id",
+        "ordinal": 3,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "UINT4",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "INTEGER"
+        },
+        "id": "inventory_id",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "customer_id",
+        "ordinal": 4,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "UINT2",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "INTEGER"
+        },
+        "id": "customer_id",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "return_date",
+        "ordinal": 5,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "DATETIME",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "TIMESTAMP_NTZ(0)"
+        },
+        "id": "return_date",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "staff_id",
+        "ordinal": 6,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "UINT1",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "BYTEINT"
+        },
+        "id": "staff_id",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "last_update",
+        "ordinal": 7,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "DATETIME",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "TIMESTAMP_NTZ(0)"
+        },
+        "id": "last_update",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      }
+    ],
+    "entityId": "",
+    "secureQri": "",
+    "fullLoadOnly": false
+  },
+  "dimensionDatasetSettings": {
+    "type": "TYPE1",
+    "rootDataEntityId": {
+      "type": "NONE",
+      "entityId": "rental-jkuu",
+      "name": "rental",
+      "projectId": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "dataAppId": "dw_mirror-ug7s"
+    },
+    "mapping": {
+      "columns": [
+        {
+          "columnName": "rental_id",
+          "type": "ROOT_PK",
+          "expression": {
+            "expressionStatement": "${rental_id}",
+            "alias": [
+              {
+                "name": "rental_id",
+                "value": "rental_id"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "rental_date",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${rental_date}",
+            "alias": [
+              {
+                "name": "rental_date",
+                "value": "rental_date"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "inventory_id",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${inventory_id}",
+            "alias": [
+              {
+                "name": "inventory_id",
+                "value": "inventory_id"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "customer_id",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${customer_id}",
+            "alias": [
+              {
+                "name": "customer_id",
+                "value": "customer_id"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "return_date",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${return_date}",
+            "alias": [
+              {
+                "name": "return_date",
+                "value": "return_date"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "staff_id",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${staff_id}",
+            "alias": [
+              {
+                "name": "staff_id",
+                "value": "staff_id"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "last_update",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${last_update}",
+            "alias": [
+              {
+                "name": "last_update",
+                "value": "last_update"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "fullyType2Sources": false,
+    "subtype": "MODEL_BASED"
+  },
+  "virtualDataset": false,
+  "description": ""
+}

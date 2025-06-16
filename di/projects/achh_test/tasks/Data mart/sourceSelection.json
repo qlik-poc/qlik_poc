@@ -1,0 +1,118 @@
+{
+  "includePatterns": [],
+  "excludePatterns": [],
+  "explicitlySelected": [
+    {
+      "sourceProject": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "sourceTask": "dw_mirror-ug7s",
+      "name": "actor",
+      "type": "NONE",
+      "sourceTableId": "actor-jkuh"
+    },
+    {
+      "sourceProject": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "sourceTask": "dw_mirror-ug7s",
+      "name": "address",
+      "type": "NONE",
+      "sourceTableId": "address-jkui"
+    },
+    {
+      "sourceProject": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "sourceTask": "dw_mirror-ug7s",
+      "name": "category",
+      "type": "NONE",
+      "sourceTableId": "category-jkuj"
+    },
+    {
+      "sourceProject": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "sourceTask": "dw_mirror-ug7s",
+      "name": "city",
+      "type": "NONE",
+      "sourceTableId": "city-jkuk"
+    },
+    {
+      "sourceProject": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "sourceTask": "dw_mirror-ug7s",
+      "name": "country",
+      "type": "NONE",
+      "sourceTableId": "country-jkul"
+    },
+    {
+      "sourceProject": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "sourceTask": "dw_mirror-ug7s",
+      "name": "customer",
+      "type": "NONE",
+      "sourceTableId": "customer-jkum"
+    },
+    {
+      "sourceProject": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "sourceTask": "dw_mirror-ug7s",
+      "name": "film",
+      "type": "NONE",
+      "sourceTableId": "film-jkun"
+    },
+    {
+      "sourceProject": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "sourceTask": "dw_mirror-ug7s",
+      "name": "film_actor",
+      "type": "NONE",
+      "sourceTableId": "film_actor-jkuo"
+    },
+    {
+      "sourceProject": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "sourceTask": "dw_mirror-ug7s",
+      "name": "film_category",
+      "type": "NONE",
+      "sourceTableId": "film_category-jkup"
+    },
+    {
+      "sourceProject": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "sourceTask": "dw_mirror-ug7s",
+      "name": "film_text",
+      "type": "NONE",
+      "sourceTableId": "film_text-jkuq"
+    },
+    {
+      "sourceProject": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "sourceTask": "dw_mirror-ug7s",
+      "name": "inventory",
+      "type": "NONE",
+      "sourceTableId": "inventory-jkur"
+    },
+    {
+      "sourceProject": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "sourceTask": "dw_mirror-ug7s",
+      "name": "language",
+      "type": "NONE",
+      "sourceTableId": "language-jkus"
+    },
+    {
+      "sourceProject": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "sourceTask": "dw_mirror-ug7s",
+      "name": "payment",
+      "type": "NONE",
+      "sourceTableId": "payment-jkut"
+    },
+    {
+      "sourceProject": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "sourceTask": "dw_mirror-ug7s",
+      "name": "rental",
+      "type": "NONE",
+      "sourceTableId": "rental-jkuu"
+    },
+    {
+      "sourceProject": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "sourceTask": "dw_mirror-ug7s",
+      "name": "staff",
+      "type": "NONE",
+      "sourceTableId": "staff-jkuv"
+    },
+    {
+      "sourceProject": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "sourceTask": "dw_mirror-ug7s",
+      "name": "store",
+      "type": "NONE",
+      "sourceTableId": "store-jkuw"
+    }
+  ]
+}

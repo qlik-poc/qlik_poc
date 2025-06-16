@@ -1,0 +1,170 @@
+{
+  "id": "inventory-zafn",
+  "name": "inventory",
+  "type": "FACT",
+  "inputDatasets": [
+    {
+      "datasetId": "inventory-jkur",
+      "name": "inventory",
+      "projectId": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "taskId": "dw_mirror-ug7s"
+    }
+  ],
+  "datasetAttributes": {
+    "materialized": "ON",
+    "hasHistory": "INHERIT",
+    "hasLiveViews": "INHERIT",
+    "hasChanges": "INHERIT",
+    "hasStandardViewsWithHeaders": "ON",
+    "watermarkIncrementalSettings": "INHERIT"
+  },
+  "tableDef": {
+    "name": "inventory",
+    "columns": [
+      {
+        "name": "inventory_id",
+        "ordinal": 1,
+        "nullable": false,
+        "primaryKeyOrdinal": 1,
+        "datatype": {
+          "type": "UINT4",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "INTEGER"
+        },
+        "id": "inventory_id",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "film_id",
+        "ordinal": 2,
+        "nullable": false,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "UINT2",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "INTEGER"
+        },
+        "id": "film_id",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "store_id",
+        "ordinal": 3,
+        "nullable": false,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "UINT1",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "BYTEINT"
+        },
+        "id": "store_id",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "last_update",
+        "ordinal": 4,
+        "nullable": false,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "DATETIME",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "TIMESTAMP_NTZ(0)"
+        },
+        "id": "last_update",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      }
+    ],
+    "entityId": "",
+    "secureQri": "",
+    "fullLoadOnly": false
+  },
+  "factDatasetSettings": {
+    "type": "TRANSACTIONAL",
+    "rootDataEntityId": {
+      "type": "NONE",
+      "entityId": "inventory-jkur",
+      "name": "inventory",
+      "projectId": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "dataAppId": "dw_mirror-ug7s"
+    },
+    "mapping": {
+      "columns": [
+        {
+          "columnName": "inventory_id",
+          "type": "ROOT_PK",
+          "expression": {
+            "expressionStatement": "${inventory_id}",
+            "alias": [
+              {
+                "name": "inventory_id",
+                "value": "inventory_id"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "film_id",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${film_id}",
+            "alias": [
+              {
+                "name": "film_id",
+                "value": "film_id"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "store_id",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${store_id}",
+            "alias": [
+              {
+                "name": "store_id",
+                "value": "store_id"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "last_update",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${last_update}",
+            "alias": [
+              {
+                "name": "last_update",
+                "value": "last_update"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "subtype": "MODEL_BASED"
+  },
+  "virtualDataset": false,
+  "description": ""
+}

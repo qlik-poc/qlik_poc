@@ -41,12 +41,17 @@
     "task-type.transform.databaseSelectionMethod": "",
     "task-type.transform.warehouseName": "",
     "task-type.transform.warehouseSelectionMethod": "",
+    "task.data_mart-i3s3.databaseName": "{{task-type.datamart.databaseName}}",
+    "task.data_mart-i3s3.internalSchema": "",
+    "task.data_mart-i3s3.taskSchema": "",
+    "task.data_mart-i3s3.warehouseName": "{{task-type.datamart.warehouseName}}",
     "task.transform-i3st.databaseName": "{{task-type.transform.databaseName}}",
     "task.transform-i3st.internalSchema": "",
     "task.transform-i3st.taskSchema": "",
     "task.transform-i3st.warehouseName": "{{task-type.transform.warehouseName}}"
   },
   "idToNameMap": {
+    "data_mart-i3s3": "Data mart",
     "transform-i3st": "Transform"
   },
   "connectionProperties": {}

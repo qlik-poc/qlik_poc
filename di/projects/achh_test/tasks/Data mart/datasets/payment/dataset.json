@@ -1,0 +1,264 @@
+{
+  "id": "payment-zafo",
+  "name": "payment",
+  "type": "DIMENSION",
+  "inputDatasets": [
+    {
+      "datasetId": "payment-jkut",
+      "name": "payment",
+      "projectId": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "taskId": "dw_mirror-ug7s"
+    }
+  ],
+  "datasetAttributes": {
+    "materialized": "ON",
+    "hasHistory": "INHERIT",
+    "hasLiveViews": "INHERIT",
+    "hasChanges": "INHERIT",
+    "hasStandardViewsWithHeaders": "ON",
+    "watermarkIncrementalSettings": "INHERIT"
+  },
+  "tableDef": {
+    "name": "payment",
+    "columns": [
+      {
+        "name": "payment_id",
+        "ordinal": 1,
+        "nullable": true,
+        "primaryKeyOrdinal": 1,
+        "datatype": {
+          "type": "UINT2",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "INTEGER"
+        },
+        "id": "payment_id",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "customer_id",
+        "ordinal": 2,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "UINT2",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "INTEGER"
+        },
+        "id": "customer_id",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "staff_id",
+        "ordinal": 3,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "UINT1",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "BYTEINT"
+        },
+        "id": "staff_id",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "rental_id",
+        "ordinal": 4,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "INT4",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "INTEGER"
+        },
+        "id": "rental_id",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "amount",
+        "ordinal": 5,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "NUMERIC",
+          "length": 0,
+          "precision": 5,
+          "scale": 2,
+          "originalTypeFull": "NUMBER(5,2)"
+        },
+        "id": "amount",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "payment_date",
+        "ordinal": 6,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "DATETIME",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "TIMESTAMP_NTZ(0)"
+        },
+        "id": "payment_date",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      },
+      {
+        "name": "last_update",
+        "ordinal": 7,
+        "nullable": true,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "DATETIME",
+          "length": 0,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": "TIMESTAMP_NTZ(0)"
+        },
+        "id": "last_update",
+        "flags": "NONE",
+        "properties": {
+          "documentMetadata": false
+        }
+      }
+    ],
+    "entityId": "",
+    "secureQri": "",
+    "fullLoadOnly": false
+  },
+  "dimensionDatasetSettings": {
+    "type": "TYPE1",
+    "rootDataEntityId": {
+      "type": "NONE",
+      "entityId": "payment-jkut",
+      "name": "payment",
+      "projectId": "{{project.ACHH$_$ACHH_MySQL_CDC_Test.projectId}}",
+      "dataAppId": "dw_mirror-ug7s"
+    },
+    "mapping": {
+      "columns": [
+        {
+          "columnName": "payment_id",
+          "type": "ROOT_PK",
+          "expression": {
+            "expressionStatement": "${payment_id}",
+            "alias": [
+              {
+                "name": "payment_id",
+                "value": "payment_id"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "customer_id",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${customer_id}",
+            "alias": [
+              {
+                "name": "customer_id",
+                "value": "customer_id"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "staff_id",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${staff_id}",
+            "alias": [
+              {
+                "name": "staff_id",
+                "value": "staff_id"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "rental_id",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${rental_id}",
+            "alias": [
+              {
+                "name": "rental_id",
+                "value": "rental_id"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "amount",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${amount}",
+            "alias": [
+              {
+                "name": "amount",
+                "value": "amount"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "payment_date",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${payment_date}",
+            "alias": [
+              {
+                "name": "payment_date",
+                "value": "payment_date"
+              }
+            ]
+          }
+        },
+        {
+          "columnName": "last_update",
+          "type": "NONE",
+          "expression": {
+            "expressionStatement": "${last_update}",
+            "alias": [
+              {
+                "name": "last_update",
+                "value": "last_update"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "fullyType2Sources": false,
+    "subtype": "MODEL_BASED"
+  },
+  "virtualDataset": false,
+  "description": ""
+}
