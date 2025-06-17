@@ -1,0 +1,43 @@
+{
+  "id": "$replicate$employees_departments",
+  "name": "employees_departments",
+  "type": "LANDING",
+  "tableDef": {
+    "name": "departments",
+    "dbSchema": "{{task.onboarding_landing-wm1-:null$_$employees.schema}}",
+    "columns": [
+      {
+        "name": "dept_no",
+        "ordinal": 1,
+        "nullable": false,
+        "primaryKeyOrdinal": 1,
+        "datatype": {
+          "type": "WSTRING",
+          "length": 4,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": ""
+        },
+        "id": "dept_no",
+        "flags": "NONE"
+      },
+      {
+        "name": "dept_name",
+        "ordinal": 2,
+        "nullable": false,
+        "primaryKeyOrdinal": 0,
+        "datatype": {
+          "type": "WSTRING",
+          "length": 40,
+          "precision": 0,
+          "scale": 0,
+          "originalTypeFull": ""
+        },
+        "id": "dept_name",
+        "flags": "NONE"
+      }
+    ],
+    "secureQri": "",
+    "fullLoadOnly": false
+  }
+}

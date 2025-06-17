@@ -1,0 +1,16 @@
+{
+  "id": "salaries",
+  "name": "salaries",
+  "type": "LANDING",
+  "inputDatasets": [
+    {
+      "datasetId": "$replicate$employees_salaries",
+      "name": "salaries",
+      "projectId": "{{ref(project.current.projectId)}}",
+      "taskId": "onboarding_landing-wm1-",
+      "schema": "{{task.onboarding_landing-wm1-:null$_$employees.schema}}"
+    }
+  ],
+  "virtualDataset": false,
+  "description": ""
+}

@@ -1,0 +1,11 @@
+{
+  "id": "$replicate$employees_dept_manager",
+  "name": "employees_dept_manager",
+  "type": "LANDING",
+  "tableDef": {
+    "name": "dept_manager",
+    "dbSchema": "{{task.onboarding_landing-wm1-:null$_$employees.schema}}",
+    "secureQri": "",
+    "fullLoadOnly": false
+  }
+}

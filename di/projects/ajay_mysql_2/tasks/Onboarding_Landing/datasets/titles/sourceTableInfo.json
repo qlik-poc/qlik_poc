@@ -1,0 +1,11 @@
+{
+  "id": "$replicate$employees_titles",
+  "name": "employees_titles",
+  "type": "LANDING",
+  "tableDef": {
+    "name": "titles",
+    "dbSchema": "{{task.onboarding_landing-wm1-:null$_$employees.schema}}",
+    "secureQri": "",
+    "fullLoadOnly": false
+  }
+}

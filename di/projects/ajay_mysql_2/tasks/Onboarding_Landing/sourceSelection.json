@@ -1,0 +1,43 @@
+{
+  "sourceConnection": "{{task.onboarding_landing-wm1-.sourceConnection}}",
+  "includePatterns": [],
+  "excludePatterns": [],
+  "explicitlySelected": [
+    {
+      "name": "departments",
+      "schema": "{{task.onboarding_landing-wm1-:null$_$employees.schema}}",
+      "type": "TABLE",
+      "sourceTableId": "$replicate$employees_departments"
+    },
+    {
+      "name": "dept_emp",
+      "schema": "{{task.onboarding_landing-wm1-:null$_$employees.schema}}",
+      "type": "TABLE",
+      "sourceTableId": "$replicate$employees_dept_emp"
+    },
+    {
+      "name": "dept_manager",
+      "schema": "{{task.onboarding_landing-wm1-:null$_$employees.schema}}",
+      "type": "TABLE",
+      "sourceTableId": "$replicate$employees_dept_manager"
+    },
+    {
+      "name": "employees",
+      "schema": "{{task.onboarding_landing-wm1-:null$_$employees.schema}}",
+      "type": "TABLE",
+      "sourceTableId": "$replicate$employees_employees"
+    },
+    {
+      "name": "salaries",
+      "schema": "{{task.onboarding_landing-wm1-:null$_$employees.schema}}",
+      "type": "TABLE",
+      "sourceTableId": "$replicate$employees_salaries"
+    },
+    {
+      "name": "titles",
+      "schema": "{{task.onboarding_landing-wm1-:null$_$employees.schema}}",
+      "type": "TABLE",
+      "sourceTableId": "$replicate$employees_titles"
+    }
+  ]
+}

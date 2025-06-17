@@ -1,0 +1,11 @@
+{
+  "id": "$replicate$employees_salaries",
+  "name": "employees_salaries",
+  "type": "LANDING",
+  "tableDef": {
+    "name": "salaries",
+    "dbSchema": "{{task.onboarding_landing-wm1-:null$_$employees.schema}}",
+    "secureQri": "",
+    "fullLoadOnly": false
+  }
+}

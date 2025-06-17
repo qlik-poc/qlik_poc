@@ -1,0 +1,23 @@
+{
+  "id": "dept_emp-wm2c",
+  "name": "dept_emp",
+  "type": "STORAGE",
+  "inputDatasets": [
+    {
+      "datasetId": "dept_emp",
+      "name": "dept_emp",
+      "projectId": "{{ref(project.current.projectId)}}",
+      "taskId": "onboarding_landing-wm1-"
+    }
+  ],
+  "datasetAttributes": {
+    "materialized": "INHERIT",
+    "hasHistory": "INHERIT",
+    "hasLiveViews": "INHERIT",
+    "hasChanges": "INHERIT",
+    "hasStandardViewsWithHeaders": "INHERIT",
+    "watermarkIncrementalSettings": "INHERIT"
+  },
+  "virtualDataset": false,
+  "description": ""
+}
